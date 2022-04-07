@@ -27,6 +27,15 @@ properties:
     FILESYNC_ENABLE: "yes"
     RSYNC_SECRET:
       vault: RSYNC_SECRET
+    # SMTP properties  
+    EMAIL_DELIVERY_METHOD: smtp
+    SMTP_ADDRESS: mail.authsmtp.com
+    SMTP_PORT: 2525
+    SMTP_DOMAIN: alpha-dev-openproject-11-3.32d430c5.lowtouch.cloud
+    SMTP_AUTHENTICATION: login
+    SMTP_USER_NAME: ac75928
+    SMTP_PASSWORD:
+      vault: APPZ_SMTP_PASSWORD
 
     SECRET_KEY_BASE: 
       vault: SECRET_KEY_BASE

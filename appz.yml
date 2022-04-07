@@ -30,6 +30,7 @@ properties:
     # SMTP properties  
     EMAIL_DELIVERY_METHOD: smtp
     SMTP_ADDRESS: mail.authsmtp.com
+    APPZ_SMTP_FROM: "AppZ 2.0 NTNX WALPOLE LAB <webmaster@ecloudcontrol.com>"
     SMTP_PORT: 2525
     SMTP_DOMAIN: alpha-dev-openproject-11-3.32d430c5.lowtouch.cloud
     SMTP_AUTHENTICATION: login

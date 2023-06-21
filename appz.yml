@@ -1,19 +1,19 @@
 app:
     name: OpenProject
     code: OPENPROJECT 
-    notify: appz@ecloudcontrol.com
+    notify: appzdev@cloudbourne.co
 
 build:
     version: 11.3
-    env: DEV
+    env: PROD
     build_file: none
     output_files: output/*.zip
     image_template: openproject-11.3
 
 deploy:
-    context: alpha/DEV
+    context: ecloudcontrol/PROD
     type: statefulset
-    replicas: 2
+    replicas: 1
     port:
     - 80
 volumes:
@@ -24,9 +24,6 @@ volumes:
 
 properties:
     ATTACHMENTS_STORAGE_PATH: /appz/data/openproject
-    FILESYNC_ENABLE: "yes"
-    RSYNC_SECRET:
-      vault: RSYNC_SECRET
 
     SECRET_KEY_BASE: 
       vault: SECRET_KEY_BASE

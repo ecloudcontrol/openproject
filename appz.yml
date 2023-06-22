@@ -14,6 +14,7 @@ deploy:
     context: ecloudcontrol/PROD
     type: statefulset
     replicas: 1
+    ingress: none
     port:
     - 80
 volumes:

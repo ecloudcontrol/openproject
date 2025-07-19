@@ -40,5 +40,5 @@ properties:
     POSTGRES_USER: openproject
     POSTGRES_PASSWORD: 
       vault: POSTGRESQL_OPENPROJECT_PASSWORD
-    ENABLE_BACKUP_METRIC: 1
+    ENABLE_BACKUP_METRICS: 1
     revision: 40

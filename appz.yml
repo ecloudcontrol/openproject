@@ -15,7 +15,7 @@ deploy:
     type: statefulset
     replicas: 1
     #ingress: none
-    resources: xx-large
+    #resources: xx-large
     port:
     - 80
     - 9102
@@ -31,6 +31,11 @@ volumes:
   size: 5Gi
 
 properties:
+# ------------------ OpenProject Memory & Thread Tuning ------------------
+    OPENPROJECT_WEB_WORKERS: "1"
+    RAILS_MIN_THREADS: "3"
+    RAILS_MAX_THREADS: "3"
+    OPENPROJECT_GOOD_JOB_MAX_THREADS: "1"
     ATTACHMENTS_STORAGE_PATH: /appz/data/openproject
 
     SECRET_KEY_BASE: 
